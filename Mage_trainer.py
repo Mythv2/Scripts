@@ -7,13 +7,13 @@ while True:
             Target.Self()
             Misc.Pause(2000)   
             
-    elif Magery >= 40 and Magery < 63 and Player.Mana > 11:
+    elif Magery >= 40 and Magery < 62 and Player.Mana > 11:
             Spells.CastMagery('Mana Drain')
             Target.WaitForTarget(4000,False)
             Target.Self()
             Misc.Pause(2000) 
             
-    elif Magery >= 63 and Magery < 75 and Player.Mana > 11:
+    elif Magery >= 62 and Magery < 75 and Player.Mana > 11:
             Spells.CastMagery('Invisibility')
             Target.WaitForTarget(4000,False)
             Target.Self()
