@@ -25,11 +25,12 @@ while True:
             Target.Self()
             Misc.Pause(2000) 
             
-    if Player.Mana < 60:                    # Adjust based on mana.
+    if Player.Mana < 50:                    # Adjust based on mana.
             Player.UseSkill("Meditation")
             Target.WaitForTarget(4000,False)
             Target.Self()
-            Misc.Pause(10000)               # Adjust based on regen
+            Misc.Pause(7000)               # Adjust based on regen
             
     if Magery == Player.GetSkillCap('Magery'):
+        Player.HeadMessage( colors[ 'green' ], 'Congratulations! You are now GM in Magery.!' )
         Misc.ScriptStopAll()
