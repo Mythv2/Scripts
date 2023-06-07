@@ -1,0 +1,24 @@
+from System.Collections.Generic import List
+from System import Byte
+
+def monster_list (range):
+    fil = Mobiles.Filter()
+    fil.Enabled = True
+    fil.RangeMax = range
+    fil.Notorieties = List[Byte](bytes([3,4,5,6]))
+    fil.IsGhost = False
+    fil.Friend = False
+    mobs = Mobiles.ApplyFilter(fil)
+    return mobs
+
+Journal.Clear()
+while True:
+    if Journal.GetLineText('All Kill', 0):
+        eligible = monster_list(10)
+        if len(eligible) > 0:
+            nearest = Mobiles.Select(eligible, 'Nearest')
+            Player.ChatSay('All Kill')
+            Target.WaitForTarget(10000, False)
+            Target.TargetExecute(nearest)
+        Journal.Clear()
+    Misc.Pause(50)
