@@ -1,4 +1,7 @@
 # Scripts
+12/04/24 - Uploaded full script folder for archiving for future use
+
+
 A small collection of beginner razor enhanced scripts for the game Ultima Online.
 
 
