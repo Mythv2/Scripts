@@ -18,25 +18,22 @@ if len(eligible) > 0:
     while Mobiles.FindBySerial(nearest.Serial) is not None and Player.DistanceTo(nearest)<=10:
         nearby_enemies_len = len(monster_list(1))
         
-        if (Player.HasPrimarySpecial == False): 
-            Player.WeaponPrimarySA()
-        
-        Player.Attack(nearest)
-        Misc.Pause(1200)
+        if (Player.HasSecondarySpecial == False): 
+            Player.WeaponSecondarySA()
             
+        Player.Attack(nearest)
+        Misc.Pause(1000)
+        
         if Player.BuffsExist('Consecrate Weapon') == False:
             Spells.CastChivalry("Consecrate Weapon")
+            Misc.Pause(1000)
             
-        if (Player.HasPrimarySpecial == False): 
-            Player.WeaponPrimarySA()
+        if (Player.HasSecondarySpecial == False): 
+            Player.WeaponSecondarySA()
         
         Player.Attack(nearest)
-        Misc.Pause(1200)
-        
-        if (Player.HasPrimarySpecial == False): 
-            Player.WeaponPrimarySA()     
-            
-        #Spells.Cast('Onslaught')
-        #Misc.Pause(1200)
+        Misc.Pause(1000)
 
+
+Misc.Pause(1000)
 

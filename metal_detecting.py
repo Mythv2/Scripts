@@ -1,0 +1,5 @@
+shovel = Items.FindByID(0x0F3A,-1,Player.Backpack.Serial)
+Items.UseItem(shovel)
+Misc.Pause(250)
+Target.TargetExecute(Player.Position.X, Player.Position.Y, Player.Position.Z)
+Misc.Pause(6000)
